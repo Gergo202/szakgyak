@@ -28,7 +28,7 @@ public class UserDao {
                 .stream()
                 .filter(u -> u.getUsername().equals(email))
                 .findFirst()
-                .orElseThrow(() -> new UsernameNotFoundException("Felhasznalonev nincs megtalalva"))
+                .orElseThrow(() -> new UsernameNotFoundException("The username is empty"))
         ;
     }
 }

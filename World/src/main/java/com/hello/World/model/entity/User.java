@@ -24,7 +24,6 @@ public class User {
     @OneToMany
     @JoinColumn(name = "userId")
     private List<Comment> comments;
-    //a userId a post és a comment-be
     public User() {
     }
 

@@ -23,7 +23,6 @@ public class Comment {
     @ManyToOne
     @JoinColumn(name = "postId")
     private Post post;
-    //userId és postId
 
     public Comment() {
     }

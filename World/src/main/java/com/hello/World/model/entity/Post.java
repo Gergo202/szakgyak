@@ -21,11 +21,9 @@ public class Post {
     @ManyToOne
     @JoinColumn(name = "userId")
     private User user;
-    //it jön létre a userId
     @OneToMany
     @JoinColumn(name = "postId")
     private List<Comment> comments;
-    //postId a comment-be
 
     public Post() {
     }

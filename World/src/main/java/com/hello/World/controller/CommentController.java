@@ -53,13 +53,13 @@ public class CommentController {
         return ResponseEntity.ok().body(commentRepository);
     }
     @GetMapping("/{userId}")
-    public ResponseEntity<CommentDto> getCommentUser(@PathVariable("userId") Long userId){
+    public ResponseEntity<CommentDto> getCommentByUser(@PathVariable("userId") Long userId){
         Comment comment = commentService.getComment(userId);
         CommentDto commentRepository = modelMapper.map(comment, CommentDto.class);
         return ResponseEntity.ok().body(commentRepository);
     }
     @GetMapping("/{commentId}")
-    public ResponseEntity<CommentDto> getCommentPost(@PathVariable("postId") Long postId){
+    public ResponseEntity<CommentDto> getCommentByPost(@PathVariable("postId") Long postId){
         Comment comment = commentService.getComment(postId);
         CommentDto commentRepository = modelMapper.map(comment, CommentDto.class);
         return ResponseEntity.ok().body(commentRepository);

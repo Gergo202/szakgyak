@@ -31,6 +31,6 @@ public class AuthenticationController {
         if (userDetails != null) {
             return ResponseEntity.ok(jwtUtils.generateToken(userDetails));
         }
-        return ResponseEntity.status(400).body("Hiba történt");
+        return ResponseEntity.status(400).body("Error");
     }
 }

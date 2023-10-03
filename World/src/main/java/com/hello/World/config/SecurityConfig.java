@@ -26,7 +26,7 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 
-        http
+        http //hibát jelez a csrf, sessionManagement, and
                 .csrf().disable()
                 .authorizeRequests()
                 .requestMatchers("/**/auth/**")

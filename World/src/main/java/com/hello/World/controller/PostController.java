@@ -53,7 +53,7 @@ public class PostController {
         return ResponseEntity.ok().body(postRepository);
     }
     /*@GetMapping("/{userId}")
-    public ResponseEntity<PostDto> getPostUser(@PathVariable("postId") Long postId){
+    public ResponseEntity<PostDto> getPostByUser(@PathVariable("postId") Long postId){
         Post post = postService.getPostUser(postId);
         PostDto postRepository = modelMapper.map(post, PostDto.class);
         return ResponseEntity.ok().body(postRepository);
